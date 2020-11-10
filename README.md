@@ -1,2 +1,2 @@
 # ml-image-tile
-A tool to spl
+A tool to split im
