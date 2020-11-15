@@ -1,2 +1,2 @@
 # ml-image-tile
-A tool to split images in tiles in pr
+A tool to split images in tiles in prepa
