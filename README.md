@@ -1,2 +1,2 @@
 # ml-image-tile
-A tool to split images in 
+A tool to split images in tiles i
