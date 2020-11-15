@@ -1,2 +1,2 @@
 # ml-image-tile
-A tool to split images in tiles in preparation for mach
+A tool to split images in tiles in preparation for machine learn
