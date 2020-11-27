@@ -2,4 +2,4 @@
 A tool to split images in tiles in preparation for machine learning work
 
 # detect-blurry
-Detect blurry im
+Detect blurry images
