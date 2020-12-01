@@ -7,4 +7,5 @@ Detect blurry images
 
 ## Example
 
-`
+```
+ .
