@@ -8,4 +8,4 @@ Detect blurry images
 ## Example
 
 ```
- ./ml-image-tile -source /Volumes/E
+ ./ml-image-tile -source /Volumes/Ext
