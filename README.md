@@ -8,4 +8,4 @@ Detect blurry images
 ## Example
 
 ```
- ./ml-image-tile -source /Volumes/Extreme SSD/ML/Bark -dest /Volumes/Extreme SSD/ML/BarkResized -height 224 -w
+ ./ml-image-tile -source /Volumes/Extreme SSD/ML/Bark -dest /Volumes/Extreme SSD/ML/BarkResized -height 224 -width 
