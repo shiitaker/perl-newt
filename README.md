@@ -9,4 +9,4 @@ Detect blurry images
 
 ```
  ./ml-image-tile -source /Volumes/Extreme SSD/ML/Bark -dest /Volumes/Extreme SSD/ML/BarkResized -height 224 -width 224 -resize 2 -rejectBlurry true -workerCount 20
-{"app":"ml-image-tile","caller":"main.go:206","fileCounter":20253,"level":"info","rejectedBlurryCounter":2348,"tileCounter":695662,"ts":"2021-08-29T01:28:25.45
+{"app":"ml-image-tile","caller":"main.go:206","fileCounter":20253,"level":"info","rejectedBlurryCounter":2348,"tileCounter":695662,"ts":"2021-08-29T01:28:25.458398Z
