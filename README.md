@@ -12,4 +12,4 @@ Detect blurry images
 {"app":"ml-image-tile","caller":"main.go:206","fileCounter":20253,"level":"info","rejectedBlurryCounter":2348,"tileCounter":695662,"ts":"2021-08-29T01:28:25.458398Z"}
  ```
 
-Generate validation data, by cr
+Generate validation data, by creat
