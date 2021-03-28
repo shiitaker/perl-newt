@@ -14,4 +14,4 @@ Detect blurry images
 
 Generate validation data, by creating a randomized tile.
  ```
- ./ml-imag
+ ./ml-image-
