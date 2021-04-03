@@ -14,4 +14,4 @@ Detect blurry images
 
 Generate validation data, by creating a randomized tile.
  ```
- ./ml-image-tile -source /Volumes/Extreme\ SSD/ML/B
+ ./ml-image-tile -source /Volumes/Extreme\ SSD/ML/Bark  
