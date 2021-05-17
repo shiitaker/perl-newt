@@ -15,3 +15,8 @@ const thresold = 7_000
 
 func main() {
 	flag.Parse()
+
+	img := gocv.IMRead(*source, gocv.IMReadAnyDepth)
+	if img.Empty() {
+		log.Fatalf("Error reading image from: %v\n", *source)
+	}
