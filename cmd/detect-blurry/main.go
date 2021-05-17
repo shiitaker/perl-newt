@@ -20,3 +20,10 @@ func main() {
 	if img.Empty() {
 		log.Fatalf("Error reading image from: %v\n", *source)
 	}
+	defer img.Close()
+
+	laplacian := gocv.NewMat()
+	defer laplacian.Close()
+	result := gocv.NewMat()
+	defer result.Close()
+	mean := gocv.NewMat()
