@@ -34,3 +34,5 @@ func main() {
 	deviation := result.Mean().Val1 * result.Mean().Val1
 	if deviation < thresold {
 		fmt.Println("Blurry", deviation, *source)
+	}
+}
