@@ -17,3 +17,7 @@ import (
 
 	log "github.com/go-kit/kit/log"
 	"github.com/go-kit/kit/log/level"
+	"github.com/namsral/flag"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
+	"gocv.io/x/gocv"
+	"golang.org/x/sync/errgroup"
