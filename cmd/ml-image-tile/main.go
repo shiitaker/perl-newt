@@ -21,3 +21,6 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"gocv.io/x/gocv"
 	"golang.org/x/sync/errgroup"
+)
+
+var (
