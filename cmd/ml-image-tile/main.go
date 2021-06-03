@@ -46,3 +46,8 @@ var (
 
 func main() {
 	flag.Parse()
+
+	logger := log.NewJSONLogger(log.NewSyncWriter(os.Stdout))
+	logger = log.With(logger, "caller", log.Caller(5), "ts", log.DefaultTimestampUTC)
+	logger = log.With(logger, "app", "ml-image-tile")
+	logger = NewLevelFilterFromString(logger, *logLevel)
