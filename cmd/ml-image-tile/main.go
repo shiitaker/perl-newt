@@ -37,3 +37,6 @@ var (
 	validationTileCount  = flag.Int("validationTileCount", 0, "Number of validation tiles")
 	validationOnly       = flag.Bool("validationOnly", false, "Generate validation tiles only")
 	rejectBlurry         = flag.Bool("rejectBlurry", false, "Reject blurry source image")
+	rejectBlurryThresold = flag.Float64("rejectBlurryThresold", 6_000, "Thresold before rejecting blurry images")
+	logLevel             = flag.String("logLevel", "INFO", "DEBUG|INFO|WARN|ERROR")
+	httpMetricsPort      = flag.Int("httpMetricsPort", 34130, "http port")
