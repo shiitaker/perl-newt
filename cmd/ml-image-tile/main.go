@@ -33,3 +33,5 @@ var (
 
 	resize               = flag.Int("resize", 2, "Divide size tilling")
 	smallerTile          = flag.Bool("smallerTile", false, "Allow tiling of remaining on the borders")
+	workerCount          = flag.Int("workerCount", 8, "Parallel worker count")
+	validationTileCount  = flag.Int("validationTileCount", 0, "Number of validation tiles")
