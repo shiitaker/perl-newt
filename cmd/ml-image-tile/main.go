@@ -24,3 +24,4 @@ import (
 )
 
 var (
+	version = "no version from LDFLAGS"
