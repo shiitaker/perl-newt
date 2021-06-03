@@ -25,3 +25,11 @@ import (
 
 var (
 	version = "no version from LDFLAGS"
+
+	source = flag.String("source", "", "Source directory for the images")
+	dest   = flag.String("dest", "", "Destination directory for the images")
+	width  = flag.Int("width", 400, "Size of the target tiles x")
+	height = flag.Int("height", 400, "Size of the target tiles y")
+
+	resize               = flag.Int("resize", 2, "Divide size tilling")
+	smallerTile          = flag.Bool("smallerTile", false, "Allow tiling of remaining on the borders")
