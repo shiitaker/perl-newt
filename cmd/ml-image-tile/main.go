@@ -40,3 +40,9 @@ var (
 	rejectBlurryThresold = flag.Float64("rejectBlurryThresold", 6_000, "Thresold before rejecting blurry images")
 	logLevel             = flag.String("logLevel", "INFO", "DEBUG|INFO|WARN|ERROR")
 	httpMetricsPort      = flag.Int("httpMetricsPort", 34130, "http port")
+
+	httpMetricsServer *http.Server
+)
+
+func main() {
+	flag.Parse()
