@@ -35,3 +35,5 @@ var (
 	smallerTile          = flag.Bool("smallerTile", false, "Allow tiling of remaining on the borders")
 	workerCount          = flag.Int("workerCount", 8, "Parallel worker count")
 	validationTileCount  = flag.Int("validationTileCount", 0, "Number of validation tiles")
+	validationOnly       = flag.Bool("validationOnly", false, "Generate validation tiles only")
+	rejectBlurry         = flag.Bool("rejectBlurry", false, "Reject blurry source image")
