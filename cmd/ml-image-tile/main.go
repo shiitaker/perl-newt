@@ -51,3 +51,11 @@ func main() {
 	logger = log.With(logger, "caller", log.Caller(5), "ts", log.DefaultTimestampUTC)
 	logger = log.With(logger, "app", "ml-image-tile")
 	logger = NewLevelFilterFromString(logger, *logLevel)
+
+	stdlog.SetOutput(log.NewStdlibAdapter(logger))
+
+	ctx := context.Background()
+	ctx, cancel := context.WithCancel(ctx)
+
+	// catch termination
+	interrupt := make(chan os.Signal, 1)
