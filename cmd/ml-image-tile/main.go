@@ -59,3 +59,7 @@ func main() {
 
 	// catch termination
 	interrupt := make(chan os.Signal, 1)
+	signal.Notify(interrupt, syscall.SIGINT, syscall.SIGTERM)
+	defer signal.Stop(interrupt)
+
+	g, ctx := errgroup.WithContext(ctx)
