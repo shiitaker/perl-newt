@@ -63,3 +63,7 @@ func main() {
 	defer signal.Stop(interrupt)
 
 	g, ctx := errgroup.WithContext(ctx)
+
+	// web server metrics
+	g.Go(func() error {
+		httpMetricsServer = &http.Server{
