@@ -67,3 +67,10 @@ func main() {
 	// web server metrics
 	g.Go(func() error {
 		httpMetricsServer = &http.Server{
+			Addr:         fmt.Sprintf(":%d", *httpMetricsPort),
+			ReadTimeout:  10 * time.Second,
+			WriteTimeout: 10 * time.Second,
+		}
+		level.Info(logger).Log("msg", fmt.Sprintf("HTTP Metrics server listening at :%d", *httpMetricsPort))
+
+		versionGauge.WithLabelValues(version).Add(1)
