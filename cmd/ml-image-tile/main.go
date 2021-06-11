@@ -74,3 +74,8 @@ func main() {
 		level.Info(logger).Log("msg", fmt.Sprintf("HTTP Metrics server listening at :%d", *httpMetricsPort))
 
 		versionGauge.WithLabelValues(version).Add(1)
+
+		// Register Prometheus metrics handler.
+		http.Handle("/metrics", promhttp.Handler())
+
+		if err := httpMetricsServer.ListenAndServe(); err != http.ErrServerClosed {
