@@ -83,3 +83,8 @@ func main() {
 		}
 
 		return nil
+	})
+
+	queue := make(chan string, *workerCount)
+
+	g.Go(func() error {
