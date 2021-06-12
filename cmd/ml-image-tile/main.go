@@ -88,3 +88,6 @@ func main() {
 	queue := make(chan string, *workerCount)
 
 	g.Go(func() error {
+		var wg sync.WaitGroup
+
+		worker := func(jobs <-chan string) {
