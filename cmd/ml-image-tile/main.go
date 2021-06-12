@@ -79,3 +79,7 @@ func main() {
 		http.Handle("/metrics", promhttp.Handler())
 
 		if err := httpMetricsServer.ListenAndServe(); err != http.ErrServerClosed {
+			return err
+		}
+
+		return nil
