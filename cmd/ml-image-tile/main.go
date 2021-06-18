@@ -94,3 +94,8 @@ func main() {
 			laplacian := gocv.NewMat()
 			defer laplacian.Close()
 			result := gocv.NewMat()
+			defer result.Close()
+			mean := gocv.NewMat()
+			defer mean.Close()
+
+			for {
