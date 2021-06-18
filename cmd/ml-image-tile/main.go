@@ -91,3 +91,6 @@ func main() {
 		var wg sync.WaitGroup
 
 		worker := func(jobs <-chan string) {
+			laplacian := gocv.NewMat()
+			defer laplacian.Close()
+			result := gocv.NewMat()
