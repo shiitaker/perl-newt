@@ -99,3 +99,7 @@ func main() {
 			defer mean.Close()
 
 			for {
+				path, ok := <-jobs
+				if !ok {
+					break
+				}
