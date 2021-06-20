@@ -103,3 +103,8 @@ func main() {
 				if !ok {
 					break
 				}
+				level.Debug(logger).Log("msg", "processing", "path", path)
+
+				if *rejectBlurry {
+					img := gocv.IMRead(path, gocv.IMReadAnyDepth)
+					if img.Empty() {
