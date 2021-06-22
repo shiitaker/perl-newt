@@ -108,3 +108,8 @@ func main() {
 				if *rejectBlurry {
 					img := gocv.IMRead(path, gocv.IMReadAnyDepth)
 					if img.Empty() {
+						level.Error(logger).Log("msg", "error reading image for blur", "path", path)
+						atomic.AddUint64(&errCounter, 1)
+						img.Close()
+
+						continue
