@@ -113,3 +113,6 @@ func main() {
 						img.Close()
 
 						continue
+					}
+
+					gocv.Laplacian(img, &laplacian, img.Type(), 5, 1, 0, gocv.BorderDefault)
