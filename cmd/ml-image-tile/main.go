@@ -116,3 +116,12 @@ func main() {
 					}
 
 					gocv.Laplacian(img, &laplacian, img.Type(), 5, 1, 0, gocv.BorderDefault)
+					gocv.MeanStdDev(laplacian, &mean, &result)
+					deviation := result.Mean().Val1 * result.Mean().Val1
+					if deviation < *rejectBlurryThresold {
+						atomic.AddUint64(&rejectedBlurryCounter, 1)
+						level.Warn(logger).Log("msg", "rejected blurry image", "path", path, "deviation", deviation)
+						img.Close()
+
+						continue
+					}
