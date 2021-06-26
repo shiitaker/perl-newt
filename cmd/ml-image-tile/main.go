@@ -125,3 +125,10 @@ func main() {
 
 						continue
 					}
+					img.Close()
+				}
+
+				atomic.AddUint64(&fileCounter, 1)
+				if !*validationOnly {
+					err := processImageBimg(logger, path, *source, *dest, *smallerTile, *resize, *width, *height)
+					if err != nil {
