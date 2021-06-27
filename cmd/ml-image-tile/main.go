@@ -132,3 +132,4 @@ func main() {
 				if !*validationOnly {
 					err := processImageBimg(logger, path, *source, *dest, *smallerTile, *resize, *width, *height)
 					if err != nil {
+						level.Error(logger).Log("msg", "error processing tile", "path", path, "err", err)
