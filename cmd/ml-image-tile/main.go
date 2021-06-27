@@ -133,3 +133,6 @@ func main() {
 					err := processImageBimg(logger, path, *source, *dest, *smallerTile, *resize, *width, *height)
 					if err != nil {
 						level.Error(logger).Log("msg", "error processing tile", "path", path, "err", err)
+						atomic.AddUint64(&errCounter, 1)
+
+						continue
