@@ -136,3 +136,8 @@ func main() {
 						atomic.AddUint64(&errCounter, 1)
 
 						continue
+					}
+				}
+
+				if *validationTileCount > 0 {
+					err := randomTileImageBimg(logger, path, *source, *dest, *validationTileCount, *resize, *width, *height)
