@@ -147,3 +147,9 @@ func main() {
 
 						continue
 					}
+				}
+			}
+
+			level.Debug(logger).Log("msg", "stopping worker")
+			wg.Done()
+		}
