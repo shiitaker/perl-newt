@@ -143,3 +143,7 @@ func main() {
 					err := randomTileImageBimg(logger, path, *source, *dest, *validationTileCount, *resize, *width, *height)
 					if err != nil {
 						level.Error(logger).Log("msg", "error processing random tile", "path", path, "err", err)
+						atomic.AddUint64(&errCounter, 1)
+
+						continue
+					}
