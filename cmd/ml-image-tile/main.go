@@ -141,3 +141,5 @@ func main() {
 
 				if *validationTileCount > 0 {
 					err := randomTileImageBimg(logger, path, *source, *dest, *validationTileCount, *resize, *width, *height)
+					if err != nil {
+						level.Error(logger).Log("msg", "error processing random tile", "path", path, "err", err)
