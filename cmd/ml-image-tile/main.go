@@ -153,3 +153,8 @@ func main() {
 			level.Debug(logger).Log("msg", "stopping worker")
 			wg.Done()
 		}
+
+		for w := 0; w < *workerCount; w++ {
+			wg.Add(1)
+
+			go worker(queue)
