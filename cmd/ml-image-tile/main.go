@@ -158,3 +158,9 @@ func main() {
 			wg.Add(1)
 
 			go worker(queue)
+		}
+
+		wg.Wait()
+
+		return fmt.Errorf("finished work")
+	})
