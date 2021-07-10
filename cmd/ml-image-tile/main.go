@@ -164,3 +164,12 @@ func main() {
 
 		return fmt.Errorf("finished work")
 	})
+
+	g.Go(func() error {
+		err := filepath.Walk(*source, func(path string, info fs.FileInfo, err error) error {
+			if err != nil {
+				fmt.Printf("prevent panic by handling failure accessing a path %q: %v\n", path, err)
+				return err
+			}
+
+			if !info.IsDir() {
