@@ -173,3 +173,5 @@ func main() {
 			}
 
 			if !info.IsDir() {
+				level.Debug(logger).Log("msg", "queuing", "path", path)
+				queue <- path
