@@ -179,3 +179,7 @@ func main() {
 
 			return nil
 		})
+
+		close(queue)
+		return err
+	})
