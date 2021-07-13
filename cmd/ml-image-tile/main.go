@@ -183,3 +183,6 @@ func main() {
 		close(queue)
 		return err
 	})
+
+	select {
+	case <-interrupt:
