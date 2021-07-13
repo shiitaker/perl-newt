@@ -194,3 +194,9 @@ func main() {
 	}
 
 	level.Warn(logger).Log("msg", "received shutdown signal")
+
+	shutdownCtx, shutdownCancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer shutdownCancel()
+
+	if httpMetricsServer != nil {
+		_ = httpMetricsServer.Shutdown(shutdownCtx)
