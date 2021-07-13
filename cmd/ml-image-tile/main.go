@@ -186,3 +186,7 @@ func main() {
 
 	select {
 	case <-interrupt:
+		cancel()
+
+		break
+	case <-ctx.Done():
