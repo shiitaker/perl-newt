@@ -200,3 +200,10 @@ func main() {
 
 	if httpMetricsServer != nil {
 		_ = httpMetricsServer.Shutdown(shutdownCtx)
+	}
+
+	err := g.Wait()
+
+	level.Info(logger).Log(
+		"fileCounter", atomic.LoadUint64(&fileCounter),
+		"tileCounter", atomic.LoadUint64(&tileCounter),
