@@ -207,3 +207,7 @@ func main() {
 	level.Info(logger).Log(
 		"fileCounter", atomic.LoadUint64(&fileCounter),
 		"tileCounter", atomic.LoadUint64(&tileCounter),
+		"rejectedBlurryCounter", atomic.LoadUint64(&rejectedBlurryCounter),
+	)
+
+	if err != nil {
