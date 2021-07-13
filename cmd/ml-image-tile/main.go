@@ -211,3 +211,7 @@ func main() {
 	)
 
 	if err != nil {
+		level.Error(logger).Log("msg", "stopping", "error", err)
+		os.Exit(2)
+	}
+}
