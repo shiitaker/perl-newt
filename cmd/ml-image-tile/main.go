@@ -190,3 +190,7 @@ func main() {
 
 		break
 	case <-ctx.Done():
+		break
+	}
+
+	level.Warn(logger).Log("msg", "received shutdown signal")
