@@ -21,3 +21,5 @@ var (
 			Help: "Counts number of file processed",
 		},
 		func() float64 {
+			return float64(atomic.LoadUint64(&fileCounter))
+		})
