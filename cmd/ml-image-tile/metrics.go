@@ -17,3 +17,7 @@ var (
 	//nolint deadcode
 	fileCounterP = promauto.NewCounterFunc(
 		prometheus.CounterOpts{
+			Name: "file_counter",
+			Help: "Counts number of file processed",
+		},
+		func() float64 {
