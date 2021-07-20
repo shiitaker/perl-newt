@@ -13,3 +13,7 @@ var (
 	tileCounter           uint64 = 0
 	errCounter            uint64 = 0
 	rejectedBlurryCounter uint64 = 0
+
+	//nolint deadcode
+	fileCounterP = promauto.NewCounterFunc(
+		prometheus.CounterOpts{
