@@ -23,3 +23,9 @@ var (
 		func() float64 {
 			return float64(atomic.LoadUint64(&fileCounter))
 		})
+
+	//nolint deadcode
+	tileCounterP = promauto.NewCounterFunc(
+		prometheus.CounterOpts{
+			Name: "tile_counter",
+			Help: "Counts number of tiles generated",
