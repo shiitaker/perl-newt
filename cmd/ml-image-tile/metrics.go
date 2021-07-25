@@ -29,3 +29,6 @@ var (
 		prometheus.CounterOpts{
 			Name: "tile_counter",
 			Help: "Counts number of tiles generated",
+		},
+		func() float64 {
+			return float64(atomic.LoadUint64(&tileCounter))
