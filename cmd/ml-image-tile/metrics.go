@@ -32,3 +32,7 @@ var (
 		},
 		func() float64 {
 			return float64(atomic.LoadUint64(&tileCounter))
+		})
+
+	//nolint deadcode
+	rejectedBlurryCounterP = promauto.NewCounterFunc(
