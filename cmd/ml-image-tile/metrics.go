@@ -36,3 +36,10 @@ var (
 
 	//nolint deadcode
 	rejectedBlurryCounterP = promauto.NewCounterFunc(
+		prometheus.CounterOpts{
+			Name: "rejected_blurry_counter",
+			Help: "Counts number of rejected pictures",
+		},
+		func() float64 {
+			return float64(atomic.LoadUint64(&rejectedBlurryCounter))
+		})
