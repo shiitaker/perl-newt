@@ -43,3 +43,11 @@ var (
 		func() float64 {
 			return float64(atomic.LoadUint64(&rejectedBlurryCounter))
 		})
+
+	//nolint deadcode
+	errCounterP = promauto.NewCounterFunc(
+		prometheus.CounterOpts{
+			Name: "error_counter",
+			Help: "Counts processing errors",
+		},
+		func() float64 {
