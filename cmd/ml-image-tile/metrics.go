@@ -53,3 +53,10 @@ var (
 		func() float64 {
 			return float64(atomic.LoadUint64(&errCounter))
 		})
+
+	versionGauge = promauto.NewGaugeVec(prometheus.GaugeOpts{
+		Namespace: "insided",
+		Name:      "version",
+		Help:      "App version.",
+	}, []string{"version"})
+)
