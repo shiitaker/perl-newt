@@ -51,3 +51,5 @@ var (
 			Help: "Counts processing errors",
 		},
 		func() float64 {
+			return float64(atomic.LoadUint64(&errCounter))
+		})
