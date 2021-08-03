@@ -6,3 +6,6 @@ import (
 	_ "image/jpeg"
 	_ "image/png"
 	"math/rand"
+	"os"
+	"path"
+	"path/filepath"
