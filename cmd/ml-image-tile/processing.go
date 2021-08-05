@@ -16,3 +16,6 @@ import (
 	"github.com/go-kit/kit/log/level"
 	"github.com/h2non/bimg"
 )
+
+// processImage
+//  on OSX CGO_CFLAGS_ALLOW="-Xpreprocessor" go get github.com/h2non/bimg
