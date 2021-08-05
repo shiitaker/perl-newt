@@ -19,3 +19,6 @@ import (
 
 // processImage
 //  on OSX CGO_CFLAGS_ALLOW="-Xpreprocessor" go get github.com/h2non/bimg
+func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smallerTile bool, resize, width, height int) error {
+	buffer, err := bimg.Read(filePath)
+	if err != nil {
