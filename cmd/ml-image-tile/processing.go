@@ -22,3 +22,6 @@ import (
 func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smallerTile bool, resize, width, height int) error {
 	buffer, err := bimg.Read(filePath)
 	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+	}
+	img := bimg.NewImage(buffer)
