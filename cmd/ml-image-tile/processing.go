@@ -25,3 +25,10 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 		fmt.Fprintln(os.Stderr, err)
 	}
 	img := bimg.NewImage(buffer)
+	if err != nil {
+		return fmt.Errorf("can't open image %s %v", filePath, err)
+	}
+	size, err := img.Size()
+	if err != nil {
+		return fmt.Errorf("can't read sizego image %s %v", filePath, err)
+	}
