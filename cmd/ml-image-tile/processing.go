@@ -39,3 +39,12 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 			return fmt.Errorf("can't resize image %s %v", filePath, err)
 		}
 		img = bimg.NewImage(buffer)
+
+		size, err = img.Size()
+		if err != nil {
+			return fmt.Errorf("can't read resized image %s %v", filePath, err)
+		}
+
+		level.Debug(logger).Log(
+			"msg", "resizing image",
+			"sizex", size.Width,
