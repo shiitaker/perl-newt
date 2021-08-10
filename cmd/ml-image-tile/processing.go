@@ -38,3 +38,4 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 		if err != nil {
 			return fmt.Errorf("can't resize image %s %v", filePath, err)
 		}
+		img = bimg.NewImage(buffer)
