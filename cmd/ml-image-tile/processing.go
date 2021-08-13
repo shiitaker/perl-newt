@@ -57,3 +57,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 	if size.Width < width || size.Height < height {
 		return fmt.Errorf("too small to be tilled %s", filePath)
 	}
+
+	count := 0
+
+	// start at the top left
