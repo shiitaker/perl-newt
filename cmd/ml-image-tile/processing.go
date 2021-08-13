@@ -48,3 +48,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 		level.Debug(logger).Log(
 			"msg", "resizing image",
 			"sizex", size.Width,
+			"sizey", size.Height,
+			"src_path", filePath,
+		)
+	}
