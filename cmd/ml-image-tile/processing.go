@@ -52,3 +52,8 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 			"src_path", filePath,
 		)
 	}
+
+	// generate tiles starting from the center
+	if size.Width < width || size.Height < height {
+		return fmt.Errorf("too small to be tilled %s", filePath)
+	}
