@@ -61,3 +61,10 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 	count := 0
 
 	// start at the top left
+	var xpos, ypos int
+
+	// find how many tiles we need
+	// we want the tile a c if we have enough material (at least x/2)
+	// we want the tile d e if we have enough material (at least y/2)
+	// a | b | c
+	// d | e | f
