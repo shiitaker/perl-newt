@@ -71,3 +71,8 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 
 	// a line is the number of slice + the extra half overlap
 	var modx, mody int
+
+	// do we allow repetition in tiles ?
+	if smallerTile {
+		modx = size.Width % width
+		mody = size.Height % height
