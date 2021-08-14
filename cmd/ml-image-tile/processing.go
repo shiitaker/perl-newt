@@ -68,3 +68,6 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 	// we want the tile d e if we have enough material (at least y/2)
 	// a | b | c
 	// d | e | f
+
+	// a line is the number of slice + the extra half overlap
+	var modx, mody int
