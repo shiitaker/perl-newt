@@ -76,3 +76,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 	if smallerTile {
 		modx = size.Width % width
 		mody = size.Height % height
+	}
+
+	needx := size.Width / width
+	needy := size.Height / height
