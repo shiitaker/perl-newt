@@ -80,3 +80,11 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 
 	needx := size.Width / width
 	needy := size.Height / height
+
+	if modx > width/2 {
+		needx += 2
+	}
+
+	if mody > height/2 {
+		needy += 2
+	}
