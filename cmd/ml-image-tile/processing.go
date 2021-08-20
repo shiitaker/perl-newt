@@ -95,3 +95,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 			ypos = cuty*height + mody/2
 		} else {
 			ypos = (cuty-1)*height + mody/2
+			if cuty == 0 {
+				ypos = 0
+			}
+			if cuty == needy-1 {
