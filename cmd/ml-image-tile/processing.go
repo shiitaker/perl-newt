@@ -99,3 +99,10 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 				ypos = 0
 			}
 			if cuty == needy-1 {
+				ypos = size.Height - height
+			}
+		}
+
+		// save an horizontal slice
+		for cutx := 0; cutx < needx; cutx++ {
+			if modx < width/2 {
