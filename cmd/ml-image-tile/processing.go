@@ -112,3 +112,9 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 				if cutx == 0 {
 					xpos = 0
 				}
+				if cutx == needx-1 {
+					xpos = size.Width - width
+				}
+			}
+
+			ext := path.Ext(filePath)
