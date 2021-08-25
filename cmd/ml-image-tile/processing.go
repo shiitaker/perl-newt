@@ -106,3 +106,6 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 		// save an horizontal slice
 		for cutx := 0; cutx < needx; cutx++ {
 			if modx < width/2 {
+				xpos = cutx*width + modx/2
+			} else {
+				xpos = (cutx-1)*width + modx/2
