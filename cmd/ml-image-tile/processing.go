@@ -118,3 +118,10 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 			}
 
 			ext := path.Ext(filePath)
+			wpath := filePath[:len(filePath)-len(ext)]
+			wpath = wpath[len(srcDir):]
+			outFilename := fmt.Sprintf("%s-%d%s", wpath, count, ext)
+			outFilePath := filepath.Join(dstDir, outFilename)
+
+			level.Debug(logger).Log(
+				"msg", "cropping image",
