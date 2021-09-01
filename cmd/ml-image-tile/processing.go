@@ -155,3 +155,8 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 				return fmt.Errorf("can't save image %s %v", outFilePath, err)
 			}
 			atomic.AddUint64(&tileCounter, 1)
+			count++
+		}
+	}
+
+	return nil
