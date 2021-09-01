@@ -143,3 +143,8 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 				"dst_dir", dstDir,
 				"out_file_path", outFilePath,
 			)
+
+			crop := bimg.NewImage(buffer)
+			cropb, err := crop.Extract(ypos, xpos, width, height)
+			if err != nil {
+				return fmt.Errorf("can't crop image %s %v", filePath, err)
