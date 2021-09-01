@@ -132,3 +132,8 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 				"needy", needy,
 				"xpos", xpos,
 				"ypos", ypos,
+				"cutx", cutx,
+				"cuty", cuty,
+				"width", width,
+				"height", height,
+				"sizex", size.Width,
