@@ -160,3 +160,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 	}
 
 	return nil
+}
+
+// processImage
+//  on OSX CGO_CFLAGS_ALLOW="-Xpreprocessor" go get github.com/h2non/bimg
