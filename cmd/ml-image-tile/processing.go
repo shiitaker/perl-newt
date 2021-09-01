@@ -125,3 +125,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 
 			level.Debug(logger).Log(
 				"msg", "cropping image",
+				"count", count,
+				"modx", modx,
+				"mody", mody,
+				"needx", needx,
