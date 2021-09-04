@@ -168,3 +168,8 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 	buffer, err := bimg.Read(filePath)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
+	}
+	img := bimg.NewImage(buffer)
+	if err != nil {
+		return fmt.Errorf("can't open image %s %v", filePath, err)
+	}
