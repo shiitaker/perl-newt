@@ -164,3 +164,7 @@ func processImageBimg(logger log.Logger, filePath, srcDir, dstDir string, smalle
 
 // processImage
 //  on OSX CGO_CFLAGS_ALLOW="-Xpreprocessor" go get github.com/h2non/bimg
+func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, count, resize, width, height int) error {
+	buffer, err := bimg.Read(filePath)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
