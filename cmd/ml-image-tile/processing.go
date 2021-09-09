@@ -195,3 +195,7 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 			"sizex", size.Width,
 			"sizey", size.Height,
 			"src_path", filePath,
+		)
+	}
+
+	// generate randome tiles
