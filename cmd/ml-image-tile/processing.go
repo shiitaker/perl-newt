@@ -184,3 +184,7 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 			return fmt.Errorf("can't resize image %s %v", filePath, err)
 		}
 		img = bimg.NewImage(buffer)
+
+		size, err = img.Size()
+		if err != nil {
+			return fmt.Errorf("can't read resized image %s %v", filePath, err)
