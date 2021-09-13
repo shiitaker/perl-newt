@@ -199,3 +199,6 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 	}
 
 	// generate randome tiles
+	if size.Width < width || size.Height < height {
+		return fmt.Errorf("too small to be tilled %s", filePath)
+	}
