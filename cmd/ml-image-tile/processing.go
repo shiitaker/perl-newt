@@ -214,3 +214,10 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 		wpath = wpath[len(srcDir):]
 		outFilename := fmt.Sprintf("%s-%d%s", wpath, i, ext)
 		outFilePath := filepath.Join(dstDir, outFilename)
+
+		level.Debug(logger).Log(
+			"msg", "cropping random image",
+			"count", count,
+			"xpos", xpos,
+			"ypos", ypos,
+			"width", width,
