@@ -202,3 +202,9 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 	if size.Width < width || size.Height < height {
 		return fmt.Errorf("too small to be tilled %s", filePath)
 	}
+
+	rand.Seed(time.Now().UTC().UnixNano())
+
+	for i := 0; i < count; i++ {
+		xpos := rand.Intn(size.Width - width)
+		ypos := rand.Intn(size.Height - height)
