@@ -208,3 +208,9 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 	for i := 0; i < count; i++ {
 		xpos := rand.Intn(size.Width - width)
 		ypos := rand.Intn(size.Height - height)
+
+		ext := path.Ext(filePath)
+		wpath := filePath[:len(filePath)-len(ext)]
+		wpath = wpath[len(srcDir):]
+		outFilename := fmt.Sprintf("%s-%d%s", wpath, i, ext)
+		outFilePath := filepath.Join(dstDir, outFilename)
