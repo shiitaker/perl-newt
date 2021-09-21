@@ -229,3 +229,6 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 			"dst_dir", dstDir,
 			"out_file_path", outFilePath,
 		)
+
+		crop := bimg.NewImage(buffer)
+		cropb, err := crop.Extract(ypos, xpos, width, height)
