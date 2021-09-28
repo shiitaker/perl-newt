@@ -232,3 +232,11 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 
 		crop := bimg.NewImage(buffer)
 		cropb, err := crop.Extract(ypos, xpos, width, height)
+		if err != nil {
+			return fmt.Errorf("can't crop image %s %v", filePath, err)
+		}
+
+		err = bimg.Write(outFilePath, cropb)
+		if err != nil {
+			return fmt.Errorf("can't save image %s %v", outFilePath, err)
+		}
