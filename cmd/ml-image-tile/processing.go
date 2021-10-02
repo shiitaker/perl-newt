@@ -240,3 +240,7 @@ func randomTileImageBimg(logger log.Logger, filePath, srcDir, dstDir string, cou
 		if err != nil {
 			return fmt.Errorf("can't save image %s %v", outFilePath, err)
 		}
+		atomic.AddUint64(&tileCounter, 1)
+	}
+	return nil
+}
