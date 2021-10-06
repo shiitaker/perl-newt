@@ -7,3 +7,6 @@ import (
 	"os"
 	"path"
 	"testing"
+
+	log "github.com/go-kit/kit/log"
+)
