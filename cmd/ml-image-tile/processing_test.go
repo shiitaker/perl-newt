@@ -10,3 +10,10 @@ import (
 
 	log "github.com/go-kit/kit/log"
 )
+
+func Test_processImageBimg(t *testing.T) {
+	testFile := "../../testdata/A/testimg.png"
+
+	type args struct {
+		logger log.Logger
+		path   string
