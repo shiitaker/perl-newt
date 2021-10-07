@@ -17,3 +17,7 @@ func Test_processImageBimg(t *testing.T) {
 	type args struct {
 		logger log.Logger
 		path   string
+		srcDir string
+		resize int
+		width  int
+		height int
