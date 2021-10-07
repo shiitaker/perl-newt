@@ -21,3 +21,7 @@ func Test_processImageBimg(t *testing.T) {
 		resize int
 		width  int
 		height int
+	}
+	tests := []struct {
+		name    string
+		args    args
