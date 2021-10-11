@@ -31,3 +31,8 @@ func Test_processImageBimg(t *testing.T) {
 			log.NewLogfmtLogger(os.Stdout),
 			testFile,
 			"./testdata",
+			0,
+			224,
+			224,
+		}, false},
+	}
