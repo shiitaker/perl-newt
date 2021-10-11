@@ -25,3 +25,9 @@ func Test_processImageBimg(t *testing.T) {
 	tests := []struct {
 		name    string
 		args    args
+		wantErr bool
+	}{
+		{"happy path", args{
+			log.NewLogfmtLogger(os.Stdout),
+			testFile,
+			"./testdata",
