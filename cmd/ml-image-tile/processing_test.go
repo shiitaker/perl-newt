@@ -47,3 +47,7 @@ func Test_processImageBimg(t *testing.T) {
 			if err := processImageBimg(
 				tt.args.logger,
 				tt.args.path,
+				tt.args.srcDir,
+				tmpDir,
+				false,
+				tt.args.resize,
