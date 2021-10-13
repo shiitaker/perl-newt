@@ -51,3 +51,10 @@ func Test_processImageBimg(t *testing.T) {
 				tmpDir,
 				false,
 				tt.args.resize,
+				tt.args.width,
+				tt.args.height,
+			); (err != nil) != tt.wantErr {
+				t.Errorf("processImageBimg() error = %v, wantErr %v", err, tt.wantErr)
+			}
+
+			// clean up only if we succeeded
