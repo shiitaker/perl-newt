@@ -36,3 +36,5 @@ func Test_processImageBimg(t *testing.T) {
 			224,
 		}, false},
 	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
