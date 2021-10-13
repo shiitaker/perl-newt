@@ -38,3 +38,12 @@ func Test_processImageBimg(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
+			tmpDir := os.TempDir()
+			t.Log("tmpDir", path.Join(tmpDir, "testdata"))
+
+			os.Mkdir(path.Join(tmpDir, "testdata"), 0755)
+			os.Mkdir(path.Join(tmpDir, "testdata/A"), 0755)
+
+			if err := processImageBimg(
+				tt.args.logger,
+				tt.args.path,
