@@ -58,3 +58,7 @@ func Test_processImageBimg(t *testing.T) {
 			}
 
 			// clean up only if we succeeded
+			// os.RemoveAll(tmpDir)
+		})
+	}
+}
