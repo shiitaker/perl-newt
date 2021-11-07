@@ -3,4 +3,4 @@ package main
 import (
 	"strings"
 
-	log "github.com/go-kit/
+	log "github.com/go-kit/kit
