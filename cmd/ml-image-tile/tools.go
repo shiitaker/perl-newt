@@ -7,4 +7,4 @@ import (
 	"github.com/go-kit/kit/log/level"
 )
 
-// NewLevelFilterFromString filter the l
+// NewLevelFilterFromString filter the log level 
