@@ -8,4 +8,4 @@ import (
 )
 
 // NewLevelFilterFromString filter the log level using the string "DEBUG|INFO|WARN|ERROR"
-func NewLevel
+func NewLevelFilterFr
