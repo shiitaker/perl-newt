@@ -9,4 +9,4 @@ import (
 
 // NewLevelFilterFromString filter the log level using the string "DEBUG|INFO|WARN|ERROR"
 func NewLevelFilterFromString(next log.Logger, ls string) log.Logger {
-	switch strings.ToLower(ls
+	switch strings.ToLower(ls) {
