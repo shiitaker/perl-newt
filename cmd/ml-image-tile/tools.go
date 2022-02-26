@@ -11,4 +11,5 @@ import (
 func NewLevelFilterFromString(next log.Logger, ls string) log.Logger {
 	switch strings.ToLower(ls) {
 	case "debug":
-		return level.NewFilter(next, level.AllowDe
+		return level.NewFilter(next, level.AllowDebug())
+	c
