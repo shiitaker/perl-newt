@@ -16,3 +16,4 @@ func NewLevelFilterFromString(next log.Logger, ls string) log.Logger {
 		return level.NewFilter(next, level.AllowInfo())
 	case "warn", "warning":
 		return level.NewFilter(next, level.AllowWarn())
+	cas
