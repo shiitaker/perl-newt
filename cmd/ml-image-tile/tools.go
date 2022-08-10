@@ -20,4 +20,4 @@ func NewLevelFilterFromString(next log.Logger, ls string) log.Logger {
 		return level.NewFilter(next, level.AllowError())
 	}
 
-	return level.NewFilter(next, lev
+	return level.NewFilter(next, level.Al
