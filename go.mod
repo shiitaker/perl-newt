@@ -1,1 +1,1 @@
-module github.com/akhenakh/
+module github.com/akhenakh/ml-im
