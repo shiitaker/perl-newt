@@ -1,1 +1,1 @@
-module github.com/akhenak
+module github.com/akhenakh/
