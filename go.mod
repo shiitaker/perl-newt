@@ -1,1 +1,2 @@
-module github.com/akhenakh/ml-image-til
+module github.com/akhenakh/ml-image-tile
+
