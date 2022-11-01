@@ -3,4 +3,4 @@ module github.com/akhenakh/ml-image-tile
 go 1.16
 
 require (
-	github.
+	github.com/go-kit
