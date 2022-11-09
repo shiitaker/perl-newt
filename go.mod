@@ -4,4 +4,5 @@ go 1.16
 
 require (
 	github.com/go-kit/kit v0.11.0
-	github.com/h2non/bimg v1.
+	github.com/h2non/bimg v1.1.5
+	gi
