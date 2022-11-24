@@ -6,4 +6,4 @@ require (
 	github.com/go-kit/kit v0.11.0
 	github.com/h2non/bimg v1.1.5
 	github.com/namsral/flag v1.7.4-pre
-	github.com/
+	github.com/promethe
